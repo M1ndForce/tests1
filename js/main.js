@@ -1,26 +1,4 @@
-function squareNumbersSum(natural) {
-  const x = Math.sqrt(natural / 2);
-  if (Number.isInteger(x)) {
-    const squaredNumbers = [];
-    const squared = Math.pow(x, 2);
-    squaredNumbers.push(squared);
-    squaredNumbers.push(squared);
-    return squaredNumbers;
-  }
-  if (!Number.isInteger(x)) {
-    return `Natural ${natural} does not match for sum of 2 squered numbers`;
-  }
-}
-
-// console.log(squareNumbersSum(36))
-// console.log(squareNumbersSum(18))
-// console.log(squareNumbersSum(0))
-// console.log(squareNumbersSum(1))
-// console.log(squareNumbersSum(2))
-// console.log(squareNumbersSum(3))
-// console.log(squareNumbersSum(34))
-
-function squareNumbersSumB(natural) {
+function squareNumbersSumAB(natural) {
   let result = [];
   let num = Math.sqrt(natural);
   num = Math.round(num);
@@ -31,15 +9,16 @@ function squareNumbersSumB(natural) {
       result.push([i, secondNat]);
     }
   }
-  return result;
+  if (result.length >= 1) {
+    return result;
+  } else {
+    return `Number ${natural} does not match requirements`;
+  }
 }
 
-// console.log(squareNumbersSumB(42))
-// console.log(squareNumbersSumB(45))
-// console.log(squareNumbersSumB(92))
-// console.log(squareNumbersSumB(25))
-// console.log(squareNumbersSumB(144))
-// console.log(squareNumbersSumB(17744))
+console.log(squareNumbersSumAB(1000000000));
+console.log(squareNumbersSumAB(17744));
+console.log(squareNumbersSumAB(92));
 
 function biggestIntSquared(num) {
   const result = [];
@@ -62,12 +41,7 @@ function biggestIntSquared(num) {
   }
 }
 
-console.log(biggestIntSquared(4));
-console.log(biggestIntSquared(1512));
-console.log(biggestIntSquared(16));
-console.log(biggestIntSquared(17));
-console.log(biggestIntSquared(64));
-console.log(biggestIntSquared(85));
-console.log(biggestIntSquared(85));
-console.log(biggestIntSquared(17));
-
+// console.log(biggestIntSquared(4));
+// console.log(biggestIntSquared(17));
+// console.log(biggestIntSquared(16));
+//
