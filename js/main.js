@@ -12,6 +12,9 @@ function squareNumbersSum(natural) {
   }
 }
 
+console.log(squareNumbersSum(36))
+console.log(squareNumbersSum(18))
+
 function squareNumbersSumB(natural) {
   let result = [];
   let num = Math.sqrt(natural)
@@ -26,15 +29,27 @@ function squareNumbersSumB(natural) {
   return result
 }
 
+console.log(squareNumbersSumB(42))
+console.log(squareNumbersSumB(45))
+console.log(squareNumbersSumB(92))
 
-function biggestIntSquered (num) {
-  for (let i = 0; num > i; ++i ) {
-    let result = num - Math.pow(4,i)
-    const nums = []
-    nums.push(result)
-    return nums
+
+function biggestIntSquared (num) {
+  const result = []
+  for (let i = 0; i < num; i++) {
+    let n = num - Math.pow(4, i)
+    result.push(n)
+    if (n < 0) {
+      if (result.length - 2 > 2) {
+        return result.length - 2
+      } else {
+        return "wrong number"
+      }
+    }
   }
 }
 
-console.log(biggestIntSquered(25))
+console.log(biggestIntSquared(4))
+
+
 
