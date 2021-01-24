@@ -1,3 +1,5 @@
+//243 a) b)
+
 function squareNumbersSumAB(natural) {
   let result = [];
   let num = Math.sqrt(natural);
@@ -20,6 +22,8 @@ console.log(squareNumbersSumAB(1000000000));
 console.log(squareNumbersSumAB(17744));
 console.log(squareNumbersSumAB(92));
 
+//107
+
 function biggestIntSquared(num) {
   const result = [];
   const errMsg = "wrong number";
@@ -40,6 +44,7 @@ function biggestIntSquared(num) {
     }
   }
 }
+
 
 // console.log(biggestIntSquared(4));
 // console.log(biggestIntSquared(17));
